@@ -1,9 +1,9 @@
 package edu.cmu.deiis.types;
 
-import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
@@ -15,12 +15,17 @@ import org.apache.uima.util.Progress;
 
 public class CollectionReader extends CollectionReader_ImplBase {
 
-  private BufferedReader buffer;
+  private Scanner scanner;
 
   @Override
+  /**
+   * Initialize a scanner object to read the file, which is parameterized with 
+   * a UIMATypeEnum. 
+   */
   public void initialize() throws ResourceInitializationException {
+    File file = new File(getConfigParameterValue(UIMATypeEnum.INPUT_FILE.toString()).toString());
     try {
-      buffer = new BufferedReader(new FileReader(getConfigParameterValue("inputFile").toString()));
+      this.scanner = new Scanner(file);
     } catch (FileNotFoundException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
@@ -28,32 +33,35 @@ public class CollectionReader extends CollectionReader_ImplBase {
   }
 
   @Override
+  /**
+   * Get the next value in the scanner and add it to the jCas
+   */
   public void getNext(CAS aCAS) throws IOException, CollectionException {
     try {
       JCas jCas = aCAS.getJCas();
+      if (this.hasNext()) {
+        String line = this.scanner.next();
+        
+      }
     } catch (CASException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-
   }
 
   @Override
   public boolean hasNext() throws IOException, CollectionException {
-    // TODO Auto-generated method stub
-    return false;
+    return this.scanner.hasNext();
   }
 
   @Override
   public Progress[] getProgress() {
-    // TODO Auto-generated method stub
-    return null;
+    return new Progress[0];
   }
 
   @Override
   public void close() throws IOException {
-    // TODO Auto-generated method stub
-
+    this.scanner.close();
   }
 
 }
