@@ -13,6 +13,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 
+import type.UIMATypeEnum;
+
 public class CollectionReader extends CollectionReader_ImplBase {
 
   private Scanner scanner;
@@ -23,7 +25,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
    * a UIMATypeEnum. 
    */
   public void initialize() throws ResourceInitializationException {
-    File file = new File(getConfigParameterValue(UIMATypeEnum.INPUT_FILE.toString()).toString());
+    File file = new File(getConfigParameterValue(UIMATypeEnum.INPUT_FILE.getParam()).toString());
     try {
       this.scanner = new Scanner(file);
     } catch (FileNotFoundException e) {
@@ -41,6 +43,8 @@ public class CollectionReader extends CollectionReader_ImplBase {
       JCas jCas = aCAS.getJCas();
       if (this.hasNext()) {
         String line = this.scanner.next();
+        String[] data = line.split(" ",2);
+        jCas.setSofaDataString(data[1], "text");
         
       }
     } catch (CASException e) {
