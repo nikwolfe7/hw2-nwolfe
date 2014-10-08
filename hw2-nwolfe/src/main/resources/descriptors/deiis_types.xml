@@ -100,12 +100,12 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>edu.cmu.deiis.types.namedEntityAnnotation</name>
+			<name>edu.cmu.deiis.types.NamedEntityAnnotation</name>
 			<description/>
 			<supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
 			<features>
 				<featureDescription>
-					<name>namedEntityString</name>
+					<name>NamedEntityString</name>
 					<description/>
 					<rangeTypeName>uima.cas.String</rangeTypeName>
 				</featureDescription>

@@ -16,8 +16,8 @@ package type;
  */
 public enum UIMATypeEnum {
 
+  HMM_MODEL("modelHMM"),
   INPUT_FILE("inputFile"),
-
   OUTPUT_FILE("outputFile");
 
   private final String parameter;
