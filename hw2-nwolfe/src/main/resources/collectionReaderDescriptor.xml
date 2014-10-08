@@ -26,20 +26,9 @@
       </nameValuePair>
     </configurationParameterSettings>
     <typeSystemDescription>
-      <types>
-        <typeDescription>
-          <name>type.Sentence</name>
-          <description>Identifier for the sentence under examination...</description>
-          <supertypeName>uima.cas.TOP</supertypeName>
-          <features>
-            <featureDescription>
-              <name>sentenceId</name>
-              <description/>
-              <rangeTypeName>uima.cas.String</rangeTypeName>
-            </featureDescription>
-          </features>
-        </typeDescription>
-      </types>
+      <imports>
+        <import name="descriptors.deiis_types"/>
+      </imports>
     </typeSystemDescription>
     <typePriorities/>
     <fsIndexCollection/>
