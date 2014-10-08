@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Wed Oct 08 01:26:37 EDT 2014
+ * Updated by JCasGen Wed Oct 08 01:32:14 EDT 2014
  * @generated */
 public class Token_Type extends Annotation_Type {
   /** @generated */

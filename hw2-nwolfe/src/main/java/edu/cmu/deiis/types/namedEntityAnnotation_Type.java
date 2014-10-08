@@ -1,6 +1,6 @@
 
-/* First created by JCasGen Wed Oct 08 01:22:58 EDT 2014 */
-package edu.cmu.deiis;
+/* First created by JCasGen Wed Oct 08 01:32:13 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
@@ -11,10 +11,9 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import edu.cmu.deiis.types.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Oct 08 01:26:37 EDT 2014
+ * Updated by JCasGen Wed Oct 08 01:32:14 EDT 2014
  * @generated */
 public class namedEntityAnnotation_Type extends Annotation_Type {
   /** @generated 
@@ -44,7 +43,7 @@ public class namedEntityAnnotation_Type extends Annotation_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.namedEntityAnnotation");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("edu.cmu.deiis.types.namedEntityAnnotation");
  
   /** @generated */
   final Feature casFeat_namedEntityString;
@@ -56,7 +55,7 @@ public class namedEntityAnnotation_Type extends Annotation_Type {
    */ 
   public String getNamedEntityString(int addr) {
         if (featOkTst && casFeat_namedEntityString == null)
-      jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.namedEntityAnnotation");
+      jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.types.namedEntityAnnotation");
     return ll_cas.ll_getStringValue(addr, casFeatCode_namedEntityString);
   }
   /** @generated
@@ -65,7 +64,7 @@ public class namedEntityAnnotation_Type extends Annotation_Type {
    */    
   public void setNamedEntityString(int addr, String v) {
         if (featOkTst && casFeat_namedEntityString == null)
-      jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.namedEntityAnnotation");
+      jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.types.namedEntityAnnotation");
     ll_cas.ll_setStringValue(addr, casFeatCode_namedEntityString, v);}
     
   

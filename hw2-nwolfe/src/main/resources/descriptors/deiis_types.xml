@@ -7,7 +7,7 @@
 	<vendor/>
 	<types>
 		<typeDescription>
-			<name>type.Sentence</name>
+			<name>edu.cmu.deiis.types.Sentence</name>
 			<description>Identifier for the sentence under examination...</description>
 			<supertypeName>uima.tcas.Annotation</supertypeName>
 			<features>
@@ -100,7 +100,7 @@
 			</features>
 		</typeDescription>
 		<typeDescription>
-			<name>edu.cmu.deiis.namedEntityAnnotation</name>
+			<name>edu.cmu.deiis.types.namedEntityAnnotation</name>
 			<description/>
 			<supertypeName>edu.cmu.deiis.types.Annotation</supertypeName>
 			<features>

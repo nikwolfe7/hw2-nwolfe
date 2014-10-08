@@ -44,8 +44,10 @@ public class CollectionReader extends CollectionReader_ImplBase {
       if (this.hasNext()) {
         String line = this.scanner.next();
         String[] data = line.split(" ",2);
-        jCas.setSofaDataString(data[1], "text");
-        
+        Sentence sentence = new Sentence(jCas); 
+        sentence.setSentenceId(data[0]);
+        sentence.setSentenceText(data[1]);
+        sentence.addToIndexes();
       }
     } catch (CASException e) {
       // TODO Auto-generated catch block

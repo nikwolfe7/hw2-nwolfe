@@ -1,18 +1,17 @@
 
 
-/* First created by JCasGen Wed Oct 08 01:22:57 EDT 2014 */
-package edu.cmu.deiis;
+/* First created by JCasGen Wed Oct 08 01:32:13 EDT 2014 */
+package edu.cmu.deiis.types;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import edu.cmu.deiis.types.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Oct 08 01:26:37 EDT 2014
- * XML source: /home/nwolfe/git/hw2-nwolfe/hw2-nwolfe/src/main/resources/collectionReaderDescriptor.xml
+ * Updated by JCasGen Wed Oct 08 01:32:14 EDT 2014
+ * XML source: /home/nwolfe/git/hw2-nwolfe/hw2-nwolfe/src/main/resources/descriptors/deiis_types.xml
  * @generated */
 public class namedEntityAnnotation extends Annotation {
   /** @generated
@@ -85,7 +84,7 @@ public class namedEntityAnnotation extends Annotation {
    */
   public String getNamedEntityString() {
     if (namedEntityAnnotation_Type.featOkTst && ((namedEntityAnnotation_Type)jcasType).casFeat_namedEntityString == null)
-      jcasType.jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.namedEntityAnnotation");
+      jcasType.jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.types.namedEntityAnnotation");
     return jcasType.ll_cas.ll_getStringValue(addr, ((namedEntityAnnotation_Type)jcasType).casFeatCode_namedEntityString);}
     
   /** setter for namedEntityString - sets  
@@ -94,7 +93,7 @@ public class namedEntityAnnotation extends Annotation {
    */
   public void setNamedEntityString(String v) {
     if (namedEntityAnnotation_Type.featOkTst && ((namedEntityAnnotation_Type)jcasType).casFeat_namedEntityString == null)
-      jcasType.jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.namedEntityAnnotation");
+      jcasType.jcas.throwFeatMissing("namedEntityString", "edu.cmu.deiis.types.namedEntityAnnotation");
     jcasType.ll_cas.ll_setStringValue(addr, ((namedEntityAnnotation_Type)jcasType).casFeatCode_namedEntityString, v);}    
   }
 
