@@ -57,6 +57,9 @@ public class NamedEntityAnalysisEngine extends JCasAnnotator_ImplBase {
   public void process(JCas jCas) throws AnalysisEngineProcessException {
     // use N best chunks
     Integer MAX_N_BEST_CHUNKS = 100;
+    @SuppressWarnings("rawtypes")
+    FSIterator fsIterator = jCas.getJFSIndexRepository().getAllIndexedFS(Sentence.type);
+   
     //FSIterator<NamedEntityAnnotation> fsIterator = jCas.getJFSIndexRepository().getFSIndexRepository().getAllIndexedFS(NamedEntityAnnotation);
     if (fsIterator.hasNext()) {
       NamedEntityAnnotation sentence = fsIterator.next();
