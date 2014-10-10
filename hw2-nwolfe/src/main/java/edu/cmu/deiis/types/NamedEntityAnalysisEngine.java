@@ -58,18 +58,18 @@ public class NamedEntityAnalysisEngine extends JCasAnnotator_ImplBase {
     String sentence = jCas.getSofaDataString();
     ScoredObject<Chunking> chunkSet = modelHMM.nBest(sentence.toCharArray(), 0, sentence.length(),
             MAX_N_BEST_CHUNKS).next();
-    
-    for(Chunk c : chunkSet.getObject().chunkSet()) {
+
+    for (Chunk c : chunkSet.getObject().chunkSet()) {
       // get all indices...
       Integer begin = sentence.substring(0, c.start()).replaceAll("\\s", "").length();
-      Integer end = sentence.substring(0, c.end()).replaceAll("\\s","").length() - 1;
-      
+      Integer end = sentence.substring(0, c.end()).replaceAll("\\s", "").length() - 1;
+
       // Extract Annotation details
       NamedEntityAnnotation nea = new NamedEntityAnnotation(jCas, begin, end);
       String namedEntity = sentence.substring(c.start(), c.end());
       String cpid = this.getClass().getName();
       Double confidence = chunkSet.score();
-      
+
       // Add Annotation details to Annotator
       nea.setNamedEntityString(namedEntity);
       nea.setCasProcessorId(cpid);
