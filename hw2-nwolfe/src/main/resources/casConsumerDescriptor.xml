@@ -11,7 +11,7 @@
     <configurationParameters>
       <configurationParameter>
         <name>outputFile</name>
-        <description>File to output the result of our analysis..</description>
+        <description>File to write output to...</description>
         <type>String</type>
         <multiValued>false</multiValued>
         <mandatory>false</mandatory>
@@ -21,7 +21,7 @@
       <nameValuePair>
         <name>outputFile</name>
         <value>
-          <string>/data/casOutput.out</string>
+          <string>hw2-nwolfe.out</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
