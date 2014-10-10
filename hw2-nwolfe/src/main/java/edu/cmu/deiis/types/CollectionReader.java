@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
+import org.apache.uima.UIMA_IllegalArgumentException;
+import org.apache.uima.UIMA_IllegalStateException;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.collection.CollectionException;
@@ -29,8 +31,8 @@ public class CollectionReader extends CollectionReader_ImplBase {
     try {
       this.scanner = new Scanner(file);
     } catch (FileNotFoundException e) {
-      // TODO Auto-generated catch block
       e.printStackTrace();
+      throw new UIMA_IllegalStateException();
     }
   }
 
@@ -41,9 +43,8 @@ public class CollectionReader extends CollectionReader_ImplBase {
   public void getNext(CAS aCAS) throws IOException, CollectionException {
     try {
       JCas jCas = aCAS.getJCas();
-      
       if (this.hasNext()) {
-        String line = this.scanner.next();
+        String line = this.scanner.nextLine();
         String[] data = line.split(" ",2);
         Sentence sentence = new Sentence(jCas);
         sentence.setSentenceId(data[0]);
@@ -58,7 +59,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
 
   @Override
   public boolean hasNext() throws IOException, CollectionException {
-    return this.scanner.hasNext();
+    return this.scanner.hasNextLine();
   }
 
   @Override

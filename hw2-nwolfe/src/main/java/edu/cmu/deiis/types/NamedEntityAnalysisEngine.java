@@ -43,7 +43,7 @@ public class NamedEntityAnalysisEngine extends JCasAnnotator_ImplBase {
       e.printStackTrace();
       throw new UIMARuntimeException();
     }
-  };
+  }
 
   /*
    * (non-Javadoc)

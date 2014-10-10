@@ -21,7 +21,7 @@
       <nameValuePair>
         <name>inputFile</name>
         <value>
-          <string>/hw2-nwolfe-ziy-proto/src/main/resources/inputData/sample.in</string>
+          <string>src/main/resources/data/sample.in</string>
         </value>
       </nameValuePair>
     </configurationParameterSettings>
