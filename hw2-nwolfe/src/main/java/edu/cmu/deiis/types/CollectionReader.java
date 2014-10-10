@@ -41,13 +41,14 @@ public class CollectionReader extends CollectionReader_ImplBase {
   public void getNext(CAS aCAS) throws IOException, CollectionException {
     try {
       JCas jCas = aCAS.getJCas();
+      
       if (this.hasNext()) {
         String line = this.scanner.next();
         String[] data = line.split(" ",2);
-        Sentence sentence = new Sentence(jCas); 
+        Sentence sentence = new Sentence(jCas);
         sentence.setSentenceId(data[0]);
-        sentence.setSentenceText(data[1]);
         sentence.addToIndexes();
+        jCas.setSofaDataString(data[1], "text");
       }
     } catch (CASException e) {
       // TODO Auto-generated catch block
