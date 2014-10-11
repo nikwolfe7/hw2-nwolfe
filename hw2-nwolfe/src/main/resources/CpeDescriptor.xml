@@ -36,7 +36,7 @@ value="100"/>
 </errorHandling>
 </casProcessor>
 
-<casProcessor deployment="integrated" name="Consumer" >
+<casProcessor deployment="integrated" name="CasConsumer" >
 <descriptor>
 <import name="CasConsumerDescriptor"/>
 </descriptor>

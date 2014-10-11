@@ -4,14 +4,14 @@
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>false</primitive>  
   <delegateAnalysisEngineSpecifiers>
-    <delegateAnalysisEngine key="namedEntityAnalysisEngineDescriptor">
-      <import name="namedEntityAnalysisEngineDescriptor"/>
-    </delegateAnalysisEngine>
-    <delegateAnalysisEngine key="casConsumerDescriptor">
-      <import name="casConsumerDescriptor"/>
-    </delegateAnalysisEngine>
-  <delegateAnalysisEngine key="AbnerAnalysisEngineDescriptor">
+    <delegateAnalysisEngine key="AbnerAnalysisEngineDescriptor">
       <import name="AbnerAnalysisEngineDescriptor"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CasConsumerDescriptor">
+      <import name="CasConsumerDescriptor"/>
+    </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="NamedEntityAnalysisEngineDescriptor">
+      <import name="NamedEntityAnalysisEngineDescriptor"/>
     </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
@@ -23,9 +23,9 @@
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
-        <node>namedEntityAnalysisEngineDescriptor</node>
         <node>AbnerAnalysisEngineDescriptor</node>
-      <node>casConsumerDescriptor</node>
+        <node>NamedEntityAnalysisEngineDescriptor</node>
+      <node>CasConsumerDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>

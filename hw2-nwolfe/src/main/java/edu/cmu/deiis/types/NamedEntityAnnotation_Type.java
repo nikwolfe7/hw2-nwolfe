@@ -13,7 +13,7 @@ import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
 
 /** 
- * Updated by JCasGen Fri Oct 10 21:29:46 EDT 2014
+ * Updated by JCasGen Fri Oct 10 21:38:51 EDT 2014
  * @generated */
 public class NamedEntityAnnotation_Type extends Annotation_Type {
   /** @generated 

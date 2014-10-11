@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Fri Oct 10 21:29:46 EDT 2014
+ * Updated by JCasGen Fri Oct 10 21:38:51 EDT 2014
  * XML source: /home/nwolfe/git/hw2-nwolfe/hw2-nwolfe/src/main/resources/AggregateAnalysisEngineDescriptor.xml
  * @generated */
 public class NamedEntityAnnotation extends Annotation {
