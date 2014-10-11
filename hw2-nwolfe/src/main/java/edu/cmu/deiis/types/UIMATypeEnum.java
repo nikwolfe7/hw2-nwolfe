@@ -1,4 +1,4 @@
-package type;
+package edu.cmu.deiis.types;
 
 /**
  * 

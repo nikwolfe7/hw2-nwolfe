@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** Identifier for the sentence under examination...
- * Updated by JCasGen Fri Oct 10 19:21:13 EDT 2014
- * XML source: /home/nwolfe/git/hw2-nwolfe/hw2-nwolfe/src/main/resources/descriptors/AggregateAnalysisEngineDescriptor.xml
+ * Updated by JCasGen Fri Oct 10 20:20:45 EDT 2014
+ * XML source: /home/nwolfe/git/hw2-nwolfe/hw2-nwolfe/src/main/resources/AbnerAnalysisEngineDescriptor.xml
  * @generated */
 public class Sentence extends Annotation {
   /** @generated

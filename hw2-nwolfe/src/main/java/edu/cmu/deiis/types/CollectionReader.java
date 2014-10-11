@@ -15,8 +15,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.Progress;
 
-import type.UIMATypeEnum;
-
 public class CollectionReader extends CollectionReader_ImplBase {
 
   private Scanner scanner;

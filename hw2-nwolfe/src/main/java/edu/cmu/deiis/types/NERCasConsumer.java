@@ -15,8 +15,6 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.resource.ResourceProcessException;
 import org.apache.uima.jcas.tcas.Annotation;
 
-import type.UIMATypeEnum;
-
 public class NERCasConsumer extends CasConsumer_ImplBase {
 
   private PrintStream writer;

@@ -18,8 +18,6 @@ import com.aliasi.chunk.NBestChunker;
 import com.aliasi.util.AbstractExternalizable;
 import com.aliasi.util.ScoredObject;
 
-import type.UIMATypeEnum;
-
 /**
  * @author nwolfe
  *
