@@ -44,7 +44,7 @@ public class AbnerAnalysisEngine extends JCasAnnotator_ImplBase {
         // check if label is a gene mention
         if (!label.equals(OTHER)) {
           
-          System.out.println(text + " " + label);
+          //System.out.println(text + " " + label);
           NamedEntityAnnotation nea = new NamedEntityAnnotation(jCas, start, (start + stop - 1));
           String cpid = this.getMyId();
           Double confidence = 0.5; // not provided by this model
