@@ -20,6 +20,7 @@ public class AbnerAnalysisEngine extends JCasAnnotator_ImplBase {
   @Override
   public void process(JCas jCas) throws AnalysisEngineProcessException {
     String data = jCas.getDocumentText();
+    System.out.println(data);
     
   }
 

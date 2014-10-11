@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
-import org.apache.uima.UIMA_IllegalArgumentException;
 import org.apache.uima.UIMA_IllegalStateException;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;

@@ -10,18 +10,22 @@
     <delegateAnalysisEngine key="casConsumerDescriptor">
       <import name="casConsumerDescriptor"/>
     </delegateAnalysisEngine>
+  <delegateAnalysisEngine key="AbnerAnalysisEngineDescriptor">
+      <import name="AbnerAnalysisEngineDescriptor"/>
+    </delegateAnalysisEngine>
   </delegateAnalysisEngineSpecifiers>
   <analysisEngineMetaData>
     <name>AggregateAnalysisEngineDescriptor</name>
     <description/>
     <version>1.0</version>
     <vendor/>
-    <configurationParameters/>
+    <configurationParameters searchStrategy="language_fallback"/>
     <configurationParameterSettings/>
     <flowConstraints>
       <fixedFlow>
         <node>namedEntityAnalysisEngineDescriptor</node>
-        <node>casConsumerDescriptor</node>
+        <node>AbnerAnalysisEngineDescriptor</node>
+      <node>casConsumerDescriptor</node>
       </fixedFlow>
     </flowConstraints>
     <typePriorities/>
