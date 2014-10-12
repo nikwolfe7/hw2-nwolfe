@@ -124,6 +124,7 @@ public class NERCasConsumer<T extends NamedEntityAnnotation> extends CasConsumer
         for (AnnotationDataStorage gene : HMMlist.get(key)) {
           if( gene.namedEntity.length() > 1 ) {
             addItemToMap(key, gene, mergeList);
+            System.out.println("Found " + gene.namedEntity);
           }
         }
       }
