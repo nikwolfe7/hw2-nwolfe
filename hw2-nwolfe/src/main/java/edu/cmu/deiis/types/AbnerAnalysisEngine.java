@@ -12,7 +12,9 @@ public class AbnerAnalysisEngine extends JCasAnnotator_ImplBase {
 
   private Tagger abnerTag;
 
-  // marker for NOT a gene mention...
+  /**
+   *  marker for NOT a gene mention...
+   */
   private final String OTHER = "O";
 
   @Override
@@ -20,7 +22,10 @@ public class AbnerAnalysisEngine extends JCasAnnotator_ImplBase {
     abnerTag = new Tagger(Tagger.BIOCREATIVE);
   }
   
-  // The CAS processor id
+  /**
+   *  The CAS processor id
+   * @return
+   */
   private String getMyId() {
     return this.getClass().getName();
   }
